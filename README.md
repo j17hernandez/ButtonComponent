@@ -19,6 +19,20 @@ npm run build
 ```
 npm run lint
 ```
+```
+npx vue-cli-service build --target lib --name test-vuetify src/index.js
+```
 
+```
+npm publish --access=public
+
+```
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Library link
+
+```
+https://www.npmjs.com/package/@j17hernandez/button-component
+
+```
