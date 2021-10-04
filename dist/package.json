@@ -1,0 +1,19 @@
+{
+    "name": "@j17hernandez/button-component",
+    "description": "Components library based on vue-cli-3",
+    "author": {
+        "name": "Jorge Hernandez DEV"
+    },
+    "version": "0.0.8",
+    "license": "MIT",
+    "main": "button-component.common.js",
+    "unpkg": "button-component.common.js",
+    "jsdelivr": "button-component.common.js",
+    "style": "button-component.css",
+    "peerDependencies": {
+        "vue": ">=2.0.0"
+    },
+    "files": [
+        "*"
+    ]
+}
