@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
+    <v-app-bar app>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -10,12 +10,17 @@
           transition="scale-transition"
           width="40"
         />
+        Buttons Component
       </div>
+      <v-spacer></v-spacer>
+      <v-btn color="primary" href="https://github.com/j17hernandez/ButtonComponent" target="_blank">
+        Go to repository
+        <v-icon color="yellow">mdi-star-shooting-outline</v-icon>
+      </v-btn>
     </v-app-bar>
 
     <v-main>
       <v-container>
-        <h2 class="text-center">Buttons Component</h2>
         <v-row>
           <v-col cols="6">
             <v-list dense v-if="list.length > 0">
@@ -42,21 +47,24 @@
             </v-container>
             <SimpleButton
               color="red"
-              name="Delete"
               outlined
               :disabled="selected == undefined || list.length == 0"
-              iconName="mdi-close"
               @click="deleteItem"
               title="Button with icon"
-            />
+            >
+              Delete
+            <v-icon color="red">mdi-close</v-icon>
+            </SimpleButton>
             <SimpleButton
               class="ml-5"
               color="success"
-              name="Add"
               @click="addItem"
               :disabled="range == 0"
               title="Simple Button"
-            />
+            >
+              Add
+              <v-icon>mdi-plus</v-icon>
+            </SimpleButton>
           </v-col>
           <v-col cols="6">
             <v-list dense v-if="secondList.length > 0">
@@ -90,43 +98,46 @@
               class="ml-5"
               color="warning"
               title="Button only text"
-              name="Only Text"
               text
-            />
+            >Only Text</SimpleButton>
             <SimpleButton
               class="ml-5"
               color="success"
-              iconName="mdi-check"
               title="Button only icon"
               icon
-            />
+            >
+              <v-icon>mdi-check</v-icon>
+            </SimpleButton>
             <SimpleButton
               class="ml-5"
               color="#164D88"
-              iconName="mdi-close"
               title="Button rounded"
               dark
-              name="Button rounded"
               rounded
-            />
+            >
+            Button rounded
+            <v-icon>mdi-close</v-icon>
+            </SimpleButton>
             <SimpleButton
               class="ml-5"
               color="pink"
-              iconName="mdi-close"
               title="Button Fab"
               dark
               fab
               rounded
-            />
+            >
+            <v-icon>mdi-close</v-icon>
+            </SimpleButton>
             <SimpleButton
               class="ml-5"
               color="purple"
               title="Button Fab"
-              name="Click to loading"
               dark
               @click="Btnloading"
               :loading="loading"
-            />
+            >
+            click to loading
+            </SimpleButton>
           </v-col>
         </v-row>
       </v-container>

@@ -32,10 +32,16 @@ npm run build
 ```
 npm run lint
 ```
+## Correrlo desde la raiz del proyecto
 ```
-npx vue-cli-service build --target lib --name test-vuetify src/index.js
+npx vue-cli-service build --target lib --name button-component src/index.js
 ```
 
+```
+cd dist
+```
+
+## Se corre dentro de la carpeta dist
 ```
 npm publish --access=public
 
@@ -48,4 +54,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ```
 https://www.npmjs.com/package/@j17hernandez/button-component
 
+```
+
+### Para desplegar a github page se usa el comando 
+```
+./deploy.sh
 ```

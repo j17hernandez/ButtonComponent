@@ -12,20 +12,13 @@
     @click="click"
     @dblclick="dblclick"
   >
-    {{ name }}
-    <slot v-if="iconName" name="icon">
-      <v-icon> {{ iconName }} </v-icon>
-    </slot>
+    <slot></slot>
   </v-btn>
 </template>
 <script>
 export default {
   name: "SimpleButton",
   props: {
-    name: {
-      type: String,
-      default: "",
-    },
     color: {
       type: String,
       default: "primary",
@@ -37,10 +30,6 @@ export default {
     outlined: {
       type: Boolean,
       default: false,
-    },
-    iconName: {
-      type: String,
-      default: ""
     },
     disabled: {
       type: Boolean,
